@@ -12,8 +12,7 @@ export const getPost = createAsyncThunk('post/getPost', async (id) => {
   const posts = JSON.parse(localStorage.getItem('posts'));
 
   if (posts[id]) {
-    console.log({...response.data, comments: posts[id]});
-    // return {...response.data, comments: posts[id]};
+    return {...response.data, comments: posts[id]};
   }
 
   return response.data;

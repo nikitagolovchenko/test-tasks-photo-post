@@ -100,11 +100,12 @@ const Modal = () => {
     return () => {
       document.body.classList.remove('modal-active');
     }
-  }, [dispatch, params]);
+  }, []);
 
   useEffect(() => {
     if (post.error && !post.loading) {
-      closeHandler();
+      // closeHandler();
+      console.log('post error:',params.id,post.error);
     }
   }, [post]);
 

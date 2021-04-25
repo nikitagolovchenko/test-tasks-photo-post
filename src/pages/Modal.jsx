@@ -100,7 +100,7 @@ const Modal = () => {
     return () => {
       document.body.classList.remove('modal-active');
     }
-  }, []);
+  }, [dispatch, params]);
 
   useEffect(() => {
     if (post.error && !post.loading) {

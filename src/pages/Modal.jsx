@@ -104,8 +104,7 @@ const Modal = () => {
 
   useEffect(() => {
     if (post.error && !post.loading) {
-      // closeHandler();
-      console.log('post error:',params.id,post.error);
+      closeHandler();
     }
   }, [post]);
 

@@ -9,10 +9,10 @@ const initialState = {
 
 export const getPost = createAsyncThunk('post/getPost', async (id) => {
   const response = await fetchPost(id);
-  const posts = JSON.parse(localStorage.getItem('posts'));
-  if (posts[id]) {
-    return {...response.data, comments: posts[id]}
-  }
+  // const posts = JSON.parse(localStorage.getItem('posts'));
+  // if (posts[id]) {
+  //   return {...response.data, comments: posts[id]}
+  // }
   return response.data;
 });
 
